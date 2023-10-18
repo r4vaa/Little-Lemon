@@ -1,17 +1,20 @@
-
-import { useEffect, useState } from 'react';
+import Header from './Components/Header/Header';
+import Nav from './Components/Nav/Nav';
+import Main from './Components/Main/Main';
+import Footer from './Components/Footer/Footer';
 import './App.css';
 
 function App() {
-   const [date, setDate] = useState(new Date())
 
-   useEffect(() => {
-      setInterval(() => setDate(new Date()), 1000)
-   })
    return (
-      <div className="App">
-         <h1>{date.toLocaleTimeString()}</h1>
-      </div>
+      <>
+
+         <Nav />
+         <Header />
+         <Main />
+         <Footer />
+
+      </>
    );
 }
 
